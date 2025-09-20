@@ -1,5 +1,6 @@
 package io.github.eduardolemos.arquiteturaspring.montadora.configuration;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -11,9 +12,8 @@ import io.github.eduardolemos.arquiteturaspring.montadora.TipoMotor;
 public class MontadoraConfiguration {
 
 	@Bean(name= "motorAspirado")
-	public Motor motorAspirado() {
+	public Motor motorAspirado(@Value("${app.montadora.motor-padrao}") Integer cavalos) {
 		var motor = new Motor();
-		motor.setCavalos(120);
 		motor.setCilindros(4);
 		motor.setLitragem(2.0);
 		motor.setModelo("2025");

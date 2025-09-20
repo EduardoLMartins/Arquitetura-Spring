@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Arquitetura Spring
+
+  jpa:
+    show_sql: true
+
+  main:
+    lazy-initialization: true
+
+app:
+  montadota:
+    motor-padrao: 130
+  config:
+    variavel: valor da variavel X
+    valor1: 500
